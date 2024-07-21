@@ -21,27 +21,23 @@ related:
     title: Home Assistant Operating System- Restoring a backup
 ---
 
-The **Backup** {% term integration %} allows you to create and download backups for your {% term "Home Assistant Core" %} and {% term "Home Assistant Container" %} installations. This backup file can be used if you migrate to {% term "Home Assistant Operating System" %}.
+The **Backup** {% term integration %} is used for {% term "Home Assistant Core" %} and {% term "Home Assistant Container" %} installations to create and download backups. This backup file can be used if you migrate to {% term "Home Assistant Operating System" %}.
 
-<div class="note">
+Note: If you use {% term "Home Assistant Operating System" %} or {% term "Home Assistant Supervised" %} installation, this page is not for you. Instead, refer to the documentation on using the [built-in back up](/common-tasks/os/#backups).
 
-If you use {% term "Home Assistant Operating System" %} or {% term "Home Assistant Supervised" %} , the [back up functionality is already built-in](/common-tasks/os/#backups). This integration is for {% term "Home Assistant Core" %} and {% term "Home Assistant Container" %} installations.
+## Actions
 
-</div>
-
-## Services
-
-The **Backup** integration exposes a service that can be used to automate the backup
+The **Backup** integration exposes an action that can be used to automate the backup
 process.
 
-### Service {% my developer_call_service service="backup.create" %}
+### Action {% my developer_call_service service="backup.create" %}
 
-The {% my developer_call_service service="backup.create" %} service can be used
+The {% my developer_call_service service="backup.create" %} action can be used
 to create a backup for your Home Assistant instance.
 
-The service has no additional options or parameters.
+The action has no additional options or parameters.
 
-Example service call:
+Example action:
 
 ```yaml
 service: backup.create
@@ -82,4 +78,3 @@ The steps on recovering from a backup depend on the installation type and use ca
 
 3. If you migrate from a {% term "Home Assistant Core" %} or {% term "Home Assistant Container" %} installation to {% term "Home Assistant Operating System" %}:
    - You can use these backup files during [onboarding](/getting-started/onboarding/) to recover your installation from backup.
-
